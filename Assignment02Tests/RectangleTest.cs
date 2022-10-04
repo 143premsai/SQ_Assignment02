@@ -12,7 +12,7 @@ namespace Assignment02Tests
     public class RectangleTest
     {
         [Test]
-        public void Valid_GetRectangleLength_NoInput_OutputDefaultValues()
+        public void ValidRectangle_GetCurrentLength_NoInput_OutputDefaultValues()
         {
             // Arrange
             Rectangle rect = new Rectangle();
@@ -26,7 +26,7 @@ namespace Assignment02Tests
         }
 
         [Test]
-        public void Valid_GetRectangleLength_InputLength20_OutputLength20()
+        public void ValidRectangle_GetCurrentLength_InputLength20_OutputLength20()
         {
             // Arrange
             Rectangle rect = new Rectangle(20, 20);
@@ -39,6 +39,63 @@ namespace Assignment02Tests
             Assert.AreEqual(expectedLength, actualLength);
         }
 
-        
+        [Test]
+        public void ValidRectangle_GetCurrentLength_InputLength50_OutputLength50()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(20, 50);
+            int expectedLength = 50;
+
+            // Act
+            int actualLength = rect.GetCurrentLength();
+
+            // Assert
+            Assert.AreEqual(expectedLength, actualLength);
+        }
+
+        [Test]
+        public void ValidRectangle_SetNewLength_DefaultObject_Input40_OutputLength40()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle();
+            int expectedLength = 40;
+
+            // Act
+            rect.SetNewLength(40);
+            int actualLength = rect.GetCurrentLength();
+
+            // Assert
+            Assert.AreEqual(expectedLength, actualLength);
+        }
+
+        [Test]
+        public void ValidRectangle_SetNewLength_ParameterizedObject_Input40_OutputLength40()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(20, 50);
+            int expectedLength = 40;
+
+            // Act
+            rect.SetNewLength(40);
+            int actualLength = rect.GetCurrentLength();
+
+            // Assert
+            Assert.AreEqual(expectedLength, actualLength);
+        }
+
+        [Test]
+        public void ValidRectangle_SetNewLength_ParameterizedObject_Input5_OutputLength5()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(20, 50);
+            int expectedLength = 5;
+
+            // Act
+            rect.SetNewLength(5);
+            int actualLength = rect.GetCurrentLength();
+
+            // Assert
+            Assert.AreEqual(expectedLength, actualLength);
+        }
     }
 }
