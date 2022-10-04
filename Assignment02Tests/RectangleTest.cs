@@ -179,7 +179,7 @@ namespace Assignment02Tests
             int expectedWidth = 70;
 
             // Act
-            rect.SetNewLength(70);
+            rect.SetNewWidth(70);
             int actualWidth = rect.GetCurrentWidth();
 
             // Assert
