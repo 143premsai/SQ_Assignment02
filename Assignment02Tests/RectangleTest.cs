@@ -140,5 +140,50 @@ namespace Assignment02Tests
             // Assert
             Assert.AreEqual(expectedWidth, actualWidth);
         }
+
+        [Test]
+        public void ValidRectangle_SetNewWidth_DefaultObject_Input55_OutputWidth55()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle();
+            int expectedWidth = 55;
+
+            // Act
+            rect.SetNewWidth(55);
+            int actualWidth = rect.GetCurrentWidth();
+
+            // Assert
+            Assert.AreEqual(expectedWidth, actualWidth);
+        }
+
+        [Test]
+        public void ValidRectangle_SetNewWidth_ParameterizedObject_Input45_OutputLength45()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(30, 45);
+            int expectedWidth = 45;
+
+            // Act
+            rect.SetNewWidth(45);
+            int actualWidth = rect.GetCurrentWidth();
+
+            // Assert
+            Assert.AreEqual(expectedWidth, actualWidth);
+        }
+
+        [Test]
+        public void ValidRectangle_SetNewWidth_ParameterizedObject_Input70_OutputWidth70()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(30, 70);
+            int expectedWidth = 70;
+
+            // Act
+            rect.SetNewLength(70);
+            int actualWidth = rect.GetCurrentWidth();
+
+            // Assert
+            Assert.AreEqual(expectedWidth, actualWidth);
+        }
     }
 }
