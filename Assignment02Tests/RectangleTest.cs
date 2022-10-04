@@ -185,5 +185,48 @@ namespace Assignment02Tests
             // Assert
             Assert.AreEqual(expectedWidth, actualWidth);
         }
+
+
+        [Test]
+        public void ValidRectangle_GetPerimeter_DefaultObject()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle();
+            int expectedPerimeter = 4;
+
+            // Act
+            int actualPerimeter = rect.GetPerimeter();
+
+            // Assert
+            Assert.AreEqual(expectedPerimeter, actualPerimeter);
+        }
+
+        [Test]
+        public void ValidRectangle_GetPerimeter_ParameterizedObject_InputLength20Width20_Output80()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(20, 20);
+            int expectedPerimeter = 80;
+
+            // Act
+            int actualPerimeter = rect.GetPerimeter();
+
+            // Assert
+            Assert.AreEqual(expectedPerimeter, actualPerimeter);
+        }
+
+        [Test]
+        public void ValidRectangle_GetPerimeter_ParameterizedObject_InputLength20Width50_Output140()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(20, 50);
+            int expectedPerimeter = 140;
+
+            // Act
+            int actualPerimeter = rect.GetPerimeter();
+
+            // Assert
+            Assert.AreEqual(expectedPerimeter, actualPerimeter);
+        }
     }
 }
