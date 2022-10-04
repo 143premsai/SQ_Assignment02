@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Assignment02;
+﻿using Assignment02;
 using NUnit.Framework;
 
 namespace Assignment02Tests
@@ -227,6 +222,47 @@ namespace Assignment02Tests
 
             // Assert
             Assert.AreEqual(expectedPerimeter, actualPerimeter);
+        }
+        [Test]
+        public void ValidRectangle_GetArea_DefaultObject()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle();
+            int expectedArea = 1;
+
+            // Act
+            int actualArea = rect.GetArea();
+
+            // Assert
+            Assert.AreEqual(expectedArea, actualArea);
+        }
+
+        [Test]
+        public void ValidRectangle_GetArea_ParameterizedObject_InputLength20Width20_Output400()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(20, 20);
+            int expectedArea = 400;
+
+            // Act
+            int actualArea = rect.GetArea();
+
+            // Assert
+            Assert.AreEqual(expectedArea, actualArea);
+        }
+
+        [Test]
+        public void ValidRectangle_GetArea_ParameterizedObject_InputLength20Width50_Output1000()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(20, 50);
+            int expectedArea = 1000;
+
+            // Act
+            int actualArea = rect.GetArea();
+
+            // Assert
+            Assert.AreEqual(expectedArea, actualArea);
         }
     }
 }
