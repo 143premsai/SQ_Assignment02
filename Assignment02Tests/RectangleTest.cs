@@ -132,13 +132,13 @@ namespace Assignment02Tests
         {
             // Arrange
             Rectangle rect = new Rectangle(60, 60);
-            int expectedLength = 60;
+            int expectedWidth = 60;
 
             // Act
-            int actualLength = rect.GetCurrentLength();
+            int actualWidth = rect.GetCurrentWidth();
 
             // Assert
-            Assert.AreEqual(expectedLength, actualLength);
+            Assert.AreEqual(expectedWidth, actualWidth);
         }
     }
 }
